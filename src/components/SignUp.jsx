@@ -33,14 +33,14 @@ const SignUp = () => {
 
     try {
       setLoading(true); // Set loading to true when the form is submitted
-      const response = await fetch(`https://blog-website-two-rose.vercel.app/api/v1/users/register`, {
+      const response = await fetch(`/api/v1/users/register`, {
         method: "POST",
         body: formDataToSend,
       });
 
       if (response.ok) {
         // Registration successful, proceed with login
-        const loginResponse = await fetch(`https://blog-website-two-rose.vercel.app/api/v1/users/login`, {
+        const loginResponse = await fetch(`/api/v1/users/login`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

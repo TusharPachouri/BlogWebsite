@@ -10,7 +10,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`https://blog-website-two-rose.vercel.app/api/v1/users/user/`, {
+        const response = await fetch(`/api/v1/users/user/`, {
           method: "GET",
           credentials: "include", // todo
         });
@@ -31,7 +31,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserPosts = async () => {
       try {
-        const response = await fetch(`https://blog-website-two-rose.vercel.app/api/v1/posts/user`, {
+        const response = await fetch(`/api/v1/posts/user`, {
           method: "GET",
           credentials: "include",
         });
@@ -51,7 +51,7 @@ const Profile = () => {
 
   const handleDeletePost = async (postId) => {
     try {
-      const response = await fetch(`https://blog-website-two-rose.vercel.app/api/v1/posts/delete/${postId}`, {
+      const response = await fetch(`/api/v1/posts/delete/${postId}`, {
         method: "DELETE",
         credentials: "include",
       });
